@@ -66,7 +66,7 @@ These values will be used by `detect_logos_gpt4o.py` to authenticate and interac
 - **poppler-utils**: Required for converting PDF to PNG.
 - **Java**: Needed for LibreOffice if not already installed.
 
-## Installation on Linux
+## Prerequisites Installation on Linux
 
 1. **Install LibreOffice**:
    ```bash
