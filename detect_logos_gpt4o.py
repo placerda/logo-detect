@@ -20,7 +20,11 @@ headers = {
 }
 
 # Output file to store results
-output_file = 'logos_output_gpt4o.txt'
+output_dir = 'output'
+output_file = os.path.join(output_dir, 'logos_output_gpt4o.txt')
+
+# Ensure the output directory exists
+os.makedirs(output_dir, exist_ok=True)
 
 # Clear the output file if it exists
 with open(output_file, 'w') as f_out:
@@ -28,6 +32,11 @@ with open(output_file, 'w') as f_out:
 
 # Directory containing the PNG files
 slides_dir = 'slides'
+
+# Check if the slides directory exists
+if not os.path.isdir(slides_dir):
+    print(f"Error: The directory '{slides_dir}' does not exist. Please create it and add PNG files to process.")
+    exit(1)
 
 # Sort and process each PNG file in the directory
 for filename in sorted(os.listdir(slides_dir)):

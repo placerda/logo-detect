@@ -1,3 +1,0 @@
-sample_slide1.png: [ADSCFD, ALTAIR, Ansys, AUTODESK, cadence, cpfd, HEXAGON, Nextflow Thecnology, M-STAR, Numeca systems, ptc, SIEMENS, SYNOPSYS]
-sample_slide2.png: [ALICE&B0B,ANYQORE,Atom,infleqtion,IQM,IONQ,KPR,Multiverse Computing,ORCA Computing,Oxford,PSOAL,PsiQuantum,Quantinuum,Quartiq,QC,rigetti,LLtech,Strangeworks,Xanadu,Google Cloud,aws,Microsoft Azure,Oracle,IBM,Argonne,CSIC,CSRC,ibm actec,RLP,NCSA,Parantec,DLR Technologies,Deloitte,Intel,Lenovo,softserve,DUALQiware,blueqat,Cirq,Qibo,Open ETH-Black,ACQ,Agnostics,Astron,BDNC,Black Brane,Clarion,Hybrid Pul,martini,OTI,Pascal,Oceanlight,QM,Qu Dew,Qu Oni,Zapata]
-sample_slide3.png: []
