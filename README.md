@@ -40,9 +40,9 @@ Processes each PNG image of a slide, sending it to an Azure OpenAI model that de
 #### Configuration
 The default directory for PNG files is:
 ```python
-slides_dir = 'slides'  # Path to the folder with PNG files for processing
+SLIDES_DIR = 'slides'  # Path to the folder with PNG files for processing
 ```
-You can change `slides_dir` if your images are saved in a different directory.
+You can change `SLIDES_DIR` if your images are saved in a different directory.
 
 #### Environment Variables
 Before running `detect_logos_gpt4o.py`, create a `.env` file in the project root with the necessary Azure OpenAI API credentials. The file should contain:
