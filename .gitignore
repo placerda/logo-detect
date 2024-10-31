@@ -4,6 +4,7 @@ data/
 slides/
 input/
 output/
+temp/
 
 # Byte-compiled files
 __pycache__/
