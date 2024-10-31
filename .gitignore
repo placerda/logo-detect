@@ -1,0 +1,96 @@
+_local/
+local/
+data/
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env/
+.venv/
+venv/
+ENV/
+env/
+# Pipenv
+Pipfile
+Pipfile.lock
+
+# Poetry
+poetry.lock
+# PEP 582 (https://www.python.org/dev/peps/pep-0582/)
+__pypackages__/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+
+# Testing
+.pytest_cache/
+.tox/
+.nox/
+
+# Coverage reports
+.coverage
+htmlcov/
+*.cover
+*.py,cover
+*.h5
+*.log
+*.sqlite
+
+# MyPy
+.mypy_cache/
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Static files
+staticfiles/
+static/
+media/
+
+# Temporary files
+*.bak
+*.swp
+*.tmp
+*.orig
+
+# Logs
+*.log
+*.out
+
+# MacOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# Other
+*.egg-info/
+dist/
+build/
+*.egg
+*.manifest
+*.spec
+
+# Python packages
+*.egg
+.eggs/
+*.whl
+
+# Documentation
+docs/_build/
