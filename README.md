@@ -15,15 +15,16 @@ Converts each `.pptx` file in a given input folder to PNG images for each slide.
    ```bash
    python convert_pptx_to_png.py
    ```
-3. PNG images for each slide will be created in the output folder (e.g., `slides`).
 
-#### Example:
+3. The script will save PNG images for each slide in the output folder (e.g., `slides`). 
+
+#### Configuration
+The default directories for input and output are:
 ```python
 INPUT_FOLDER = 'data'      # Path to the input folder with .pptx files
 OUTPUT_FOLDER = 'slides'   # Path to the output folder for PNG images
-
-convert_pptx_to_png(INPUT_FOLDER, OUTPUT_FOLDER)
 ```
+You can change `INPUT_FOLDER` and `OUTPUT_FOLDER` to customize where files are read and saved.
 
 ### 2. `detect_logos_gpt4o.py`
 Processes each PNG image of a slide, sending it to an Azure OpenAI model that detects company logos. The script reads all PNG files in a specified folder, converts each image to base64, and sends it to the OpenAI API. Results are saved in an output file with the detected logos for each slide.
@@ -36,25 +37,34 @@ Processes each PNG image of a slide, sending it to an Azure OpenAI model that de
    ```
 3. The results will be saved in an output file (`output/logos_output_gpt4o.txt`).
 
-#### Example:
+#### Configuration
+The default directory for PNG files is:
 ```python
-# Ensure .env has API credentials for Azure OpenAI
-python detect_logos_gpt4o.py
+slides_dir = 'slides'  # Path to the folder with PNG files for processing
 ```
+You can change `slides_dir` if your images are saved in a different directory.
+
+#### Environment Variables
+Before running `detect_logos_gpt4o.py`, create a `.env` file in the project root with the necessary Azure OpenAI API credentials. The file should contain:
+
+- **`AZURE_OPENAI_API_KEY`**: Your API key for Azure OpenAI.
+- **`AZURE_OPENAI_ENDPOINT`**: The endpoint URL for Azure OpenAI.
+- **`AZURE_OPENAI_DEPLOYMENT_ID`**: The deployment ID of your model.
+
+An example `.env` file:
+```plaintext
+AZURE_OPENAI_API_KEY=your_api_key
+AZURE_OPENAI_ENDPOINT=https://your_endpoint.openai.azure.com
+AZURE_OPENAI_DEPLOYMENT_ID=your_deployment_id
+```
+These values will be used by `detect_logos_gpt4o.py` to authenticate and interact with the Azure OpenAI API.
 
 ## Prerequisites
 
-### System Requirements
-- **Python** (3.7 or later)
+- **Python** (3.11 or later)
 - **LibreOffice**: Required for converting `.pptx` to PDF on Linux.
 - **poppler-utils**: Required for converting PDF to PNG.
 - **Java**: Needed for LibreOffice if not already installed.
-
-### Environment Setup
-1. Set up your `.env` file with the following Azure OpenAI API credentials:
-   - `AZURE_OPENAI_API_KEY`
-   - `AZURE_OPENAI_ENDPOINT`
-   - `AZURE_OPENAI_DEPLOYMENT_ID`
 
 ## Installation on Linux
 
